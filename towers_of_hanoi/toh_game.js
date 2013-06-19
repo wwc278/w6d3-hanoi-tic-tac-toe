@@ -6,20 +6,6 @@ TOH = (function(){
 
 	var TOHProto = Game.prototype
 
-	TOHProto.toString = function () {
-		var gameString = "";
-
-		for (var i = 0; i < 3; i++) {
-			var rowString = "\n|";
-			this.towers.forEach(function(arg) {
-				var chr = (arg[i]) ? arg[i] : ' '
-				rowString += chr + "|";
-			});
-			gameString = rowString + gameString;
-		}
-		return gameString
-	}
-
 	TOHProto.moveDisk = function (initialPos, finalPos) {
 		if (this.legalMove(initialPos, finalPos)) {
 			this.towers[finalPos].push( this.towers[initialPos].pop() );

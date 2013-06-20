@@ -1,5 +1,3 @@
-
-
 playGame = function (){
 
 	var game = new TOH.Game()
